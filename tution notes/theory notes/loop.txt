@@ -1,0 +1,106 @@
+#include<stdio.h>
+void main()
+{
+int a,b,c;
+printf("enter two values");                    a=10=01010  a=15= 1111
+scanf("%d%d",&a,&b);                           b=22=10110  b=12= 1100
+c=a;                   a=a+b;  a=a*b;   a=a^b;    a=11100  a=    0011
+a=b;                   b=a-b;  b=a/b;   b=a^b;    b=01010  b=    1111
+b=c;                   a=a-b;  a=a/b;   a=a^b;    a=10110  a=    1100
+printf("a=%d,b=%d",a,b);
+}
+
+while(condition)//process repeat until cond is false
+{               //entry control loop
+statement;
+}
+
+do       //at first statement will execute for once,then cond will check
+{        //process repeat until cond false
+statement; //exit control loop
+}while(condition);
+
+void main()
+{
+int i=1;
+while(i<5)
+{
+printf("%d",i);
+i++;
+}
+}  
+output:1234
+
+void main()
+{
+int i=1;
+do{
+printf("%d",i);
+i++;
+}while(i<5);
+}  
+output:1234
+
+
+void main()
+{
+int i=10;
+while(i<5)
+{
+printf("%d",i);
+i++;
+}
+}
+output:no output
+
+void main()
+{
+int i=10;
+do
+{
+printf("%d",i);
+i++;
+}while(i<5);
+}
+output:10
+
+for(initialization;condition;iteration)
+{
+s1;
+}
+
+void main()
+{
+int i;
+for(i=1;i<5;i++)
+printf("%d",i);
+}
+output:1234
+
+void main()
+{
+int i=1;
+for(;i<5;)
+{
+printf("%d",i);
+i++;
+}
+}
+output:1234
+
+void main()
+{
+for(; ;)
+{
+printf("hi");
+}
+}
+output:hihihihihihihihi............................
+
+void main()
+{
+int i;
+for(i=1;i<5;i++);
+printf("%d",i);
+}
+output:5

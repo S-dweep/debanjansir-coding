@@ -3,6 +3,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Main",
+      "request": "launch",
+      "mainClass": "Main",
+      "projectName": "coding_ee83cf7"
+    },
+    {
+      "type": "java",
       "name": "demojv",
       "request": "launch",
       "mainClass": "demojv",

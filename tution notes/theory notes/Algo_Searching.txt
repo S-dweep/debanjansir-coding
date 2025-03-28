@@ -1,0 +1,116 @@
+Control Statement
+1. Sequential
+2.Selection
+3.Repetation
+
+Algo to add two user given values
+1.algo of main()
+step1: take two input as a & b
+step2: set sum=a+b
+step3: print sum
+step4: exit
+
+2. add(a,b)
+step1: return a+b;
+
+
+Complexity: O(1)
+
+Algo to identify odd or even
+1.algo of main()
+step1: take one input as num
+step2: if num%2=0
+        print "even"
+       else
+        print "odd"
+[end of if]
+step3: exit
+
+complexity: O(1)
+
+
+Algo to calculte factorial of an user given integer
+1.Algo of main()
+step1: take input as num
+step2: set f=1
+step3: repeat step 4 for i=1 to num 
+step4: set f=f*i
+[end of loop]
+step5: print f
+step6: exit
+
+COmplexity: O(n)
+
+2.algo of user defined function
+
+fact(n)
+step1: if n=1 or n=0
+       return 1
+       else
+       return n*fact(n-1)
+
+Algo to reverse an user given integer
+1.Algo of main()
+step1: take input as num
+step2: set rev=0
+step3: repeat step 4,5 while num!=0
+step4: set rev=(rev*10)+(num%10);
+step5: set num=num/10
+[end of loop]
+step6: print rev
+step7:exit
+
+SEARCHING
+
+Linear Searching
+traversing
+3 5 7 8 12 4 2
+
+item:8
+index:3
+
+linearserch(arr,n,item)
+step 1:repeat setp 2 for i=0 to n-1
+step 2: if arr[i]=item
+       print i and go to exit
+[end if]
+[end loop]
+step 4: if i=n
+        print "item not found"
+step 5: exit
+
+Complexity:
+best:O(1) [item present at first position]
+avg: constant
+worst:O(n) [item not present or item present at last index]
+
+BINARY SEARCH
+condition:
+Array must be sorted
+
+int a[]={1,2,3,4,5,6,7,8};
+item:7
+beg,end,mid
+beg: 0
+end: n-1 : 7
+mid:(beg+end)/2
+
+binaySearch(arr,n,item)
+step1: beg=0,end=n-1
+step2: repeat step 3 and 4 while beg<=end 
+step3: mid=(beg+end)/2
+step4: if arr[mid]=item
+       print mid and goto exit
+       else if arr[mid]>item 
+       set end=mid-1
+       else
+       set beg=mid+1
+  [end if]
+ [end loop]
+step5: if beg>end
+       print "item not found"
+step6: exit
+
+Complexity: O(logn)
+  
+
