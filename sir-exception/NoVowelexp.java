@@ -1,13 +1,13 @@
 import java.util.*;
 
-class MyExp extends Exception {
+class MyExp102 extends Exception {
     public String msg() {
         return "User defined exception: does not contain vowel";
     }
 }
 
 class NoVowelexp { 
-    public static void hasVowel(String str) throws MyExp {
+    public static void hasVowel(String str) throws MyExp102 {
         int count=0;
         str=str.toLowerCase();
         for(int i=0;i<str.length();i++){
@@ -15,7 +15,7 @@ class NoVowelexp {
             str.charAt(i)=='o'||str.charAt(i)=='u') count++;
         }
         if(count>0) System.out.println("Contains vowel");
-        else throw new MyExp();
+        else throw new MyExp102();
     }
 
     public static void main(String args[]) {
@@ -24,7 +24,7 @@ class NoVowelexp {
         String str = sc.next();
         try {
             hasVowel(str);
-        } catch (MyExp e) {
+        } catch (MyExp102 e) {
             System.out.println(e.msg());
         } finally {
             sc.close();

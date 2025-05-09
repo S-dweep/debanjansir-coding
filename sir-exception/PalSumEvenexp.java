@@ -1,13 +1,13 @@
 import java.util.*;
 
-class MyExp extends Exception {
+class MyExp101 extends Exception {
     public String msg() {
         return "User defined exception: odd palindrome sum";
     }
 }
 
 class PalSumEvenexp { 
-    public static void PalindromeSum(int arr[], int n) throws MyExp {
+    public static void PalindromeSum(int arr[], int n) throws MyExp101 {
         int num, sum=0;
         for(int i=0;i<n;i++){
             int rev=0;
@@ -19,7 +19,7 @@ class PalSumEvenexp {
             if(rev==arr[i]) sum+=arr[i];
         }
         if(sum%2==0) System.out.println("even palindrome sum");
-        else throw new MyExp();
+        else throw new MyExp101();
     }
 
     public static void main(String args[]) {
@@ -31,7 +31,7 @@ class PalSumEvenexp {
         }
         try {
             PalindromeSum(arr,n);
-        } catch (MyExp e) {
+        } catch (MyExp101 e) {
             System.out.println(e.msg());
         } finally {
             sc.close();
