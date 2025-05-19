@@ -1,0 +1,11 @@
+declare 
+a NUMBER := &a;
+b NUMBER := &b;
+begin
+dbms_output.put_line('before swapping: a = ' || a || ' , b = ' || b);
+a := a + b;
+b := a - b;
+a := a - b;
+dbms_output.put_line('after swapping: a = ' || a || ' , b = ' || b);
+end;
+/
