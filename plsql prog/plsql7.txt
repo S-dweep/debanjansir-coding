@@ -1,0 +1,25 @@
+declare
+n number := &n;
+num number;
+digit number;
+c number := 0;
+s number := 0;
+begin
+num := n;
+while (num>0) loop
+c := c + 1;
+num := num/10;
+end loop;
+num := n;
+while (num>0) loop
+digit := mod(num,10);
+s := s + power(digit,count);
+num := num/10;
+end loop;
+if s = n then
+dbms_output.put_line(n || ' is armstrong');
+else
+dbms_output.put_line(n || ' is not armstrong');
+end if;
+end;
+/

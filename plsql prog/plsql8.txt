@@ -1,0 +1,16 @@
+declare
+n number := &n;
+i number;
+begin
+for i in 2 .. n/2 loop
+if mod(n,i) = 0 then
+exit;
+end if;
+end loop;
+if n<>1 and i>n/2 then
+dbms_output.put_line(n || ' is prime');
+else
+dbms_output.put_line(n || ' is not prime');
+end if;
+end;
+/

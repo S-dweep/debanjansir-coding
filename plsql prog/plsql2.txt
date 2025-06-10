@@ -1,0 +1,8 @@
+declare
+c NUMBER := &c;
+f NUMBER;
+begin
+f := (c * 9/5) + 32;
+dbms_output.put_line(c || '°C = ' || f || '°F');
+end;
+/

@@ -1,0 +1,11 @@
+declare
+x number(2) := &x;
+rev number(2) := 0;
+begin
+while (x>0) loop
+rev := (rev*10) + mod(x,10);
+x := x/10;
+end loop;
+dbms_output.put_line(rev);
+end;
+/

@@ -1,0 +1,9 @@
+declare
+a number(2) := &a;
+I number(2);
+begin
+for i in 10 .. a loop
+dbms_output.put_line(i);
+end loop;
+end;
+/

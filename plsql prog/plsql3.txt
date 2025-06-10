@@ -1,0 +1,8 @@
+declare
+l NUMBER := &l;
+b NUMBER := &b;
+begin
+dbms_output.put_line('perimeter = ' || (2*(l+b)));
+dbms_output.put_line('area = ' || (l*b));
+end;
+/
