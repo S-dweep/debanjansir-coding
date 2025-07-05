@@ -1,0 +1,44 @@
+CREATE OR REPLACE PROCEDURE get_nth_prime (
+    n IN NUMBER,
+    nth_prime OUT NUMBER
+) IS
+    prime_count NUMBER := 0;
+    num NUMBER := 2;
+
+    -- Local function to check if a number is prime
+    FUNCTION isPrime(x IN NUMBER) RETURN BOOLEAN IS
+        i NUMBER;
+    BEGIN
+        IF x < 2 THEN
+            RETURN FALSE;
+        END IF;
+
+        FOR i IN 2 .. FLOOR(SQRT(x)) LOOP
+            IF MOD(x, i) = 0 THEN
+                RETURN FALSE;
+            END IF;
+        END LOOP;
+
+        RETURN TRUE;
+    END;
+
+BEGIN
+    WHILE prime_count < n LOOP
+        IF isPrime(num) THEN
+            prime_count := prime_count + 1;
+            nth_prime := num;
+        END IF;
+        num := num + 1;
+    END LOOP;
+END;
+/
+
+DECLARE
+    n NUMBER := &n;
+    result NUMBER;
+BEGIN
+    get_nth_prime(n, result);
+    DBMS_OUTPUT.PUT_LINE('The ' || n || 'th prime number is: ' || result);
+END;
+/
+

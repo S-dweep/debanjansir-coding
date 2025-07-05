@@ -1,0 +1,21 @@
+declare
+num number := &num;
+fact number := 1;
+i number;
+myexp exception;
+begin
+if num = 0 then
+raise myexp;
+else
+for i in 1..num loop
+fact := fact * i;
+end loop;
+dbms_output.put_line(fact);
+end if;
+exception
+when myexp then
+dbms_output.put_line('num cannot be equal to 0');
+when others then
+dbms_output.put_line('error');
+end;
+/

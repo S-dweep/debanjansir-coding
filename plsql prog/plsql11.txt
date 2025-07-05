@@ -1,0 +1,21 @@
+declare
+num number
+function isPrime(n number)
+return number is
+begin
+if n <= 1 then
+return 0;
+end if;
+for i in 2..floor(sqrt(n)) loop
+if mod(n, i) = 0 then
+return 0;
+end if;
+end loop;
+return 1;
+end;
+begin
+num := &num;
+res := isPrime(num);
+dbms_output.put_line(res);
+end;
+/

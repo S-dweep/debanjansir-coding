@@ -1,0 +1,20 @@
+declare
+num number
+function fiboSeries(n in number)
+return number is
+begin
+if n=0 then
+return 0;
+end if;
+if n=1 then
+return 1;
+end if;
+return fiboSeries(n-1) + fiboSeries(n-2);
+end;
+begin
+num := &num;
+for i in 0..num-1 loop
+dbms_output.put_line(fiboSeries(i));
+end loop;
+end;
+/
