@@ -1,0 +1,14 @@
+create table student(
+roll number(3) primary key,
+name varchar2(20) not null,
+age number check (age>18),
+dept varchar2(10)
+);
+
+alter table student add (marks number(3));
+
+alter table student modify (dept varchar2(6));
+
+alter table student drop column marks;
+
+alter table student add constraint unique_name unique (name);
